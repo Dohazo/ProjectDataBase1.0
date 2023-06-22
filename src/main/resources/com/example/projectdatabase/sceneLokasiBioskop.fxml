@@ -15,7 +15,7 @@
       <Label layoutX="26.0" layoutY="105.0" text="Id Movie" />
       <Label layoutX="26.0" layoutY="147.0" text="Tempat" />
       <Label layoutX="26.0" layoutY="192.0" text="Alamat" />
-      <TableView fx:id="tblLokasiBioskop" layoutX="304.0" layoutY="81.0" prefHeight="219.0" prefWidth="342.0">
+      <TableView fx:id="tblLokasiBioskop" layoutX="304.0" layoutY="81.0" onMouseClicked="#getSelected" prefHeight="219.0" prefWidth="342.0">
         <columns>
           <TableColumn fx:id="tblIdMovie" prefWidth="119.0" text="id_movie" />
           <TableColumn fx:id="tblTempat" prefWidth="102.0" text="tempat" />
@@ -24,12 +24,13 @@
       </TableView>
       <Button layoutX="91.0" layoutY="239.0" mnemonicParsing="false" onAction="#onAddBtn" text="ADD" />
       <Button layoutX="194.0" layoutY="239.0" mnemonicParsing="false" onAction="#onClrBtn" text="CLEAR" />
-      <Button layoutX="140.0" layoutY="307.0" mnemonicParsing="false" onAction="#onDeleteBtn" text="DELETE" />
+      <Button fx:id="deleteBtn" layoutX="192.0" layoutY="308.0" mnemonicParsing="false" onAction="#onDeleteBtn" text="DELETE" />
       <Label layoutX="54.0" layoutY="27.0" text="TABEL LOKASI BIOSKOP" textFill="#eb0000">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
       <TextField fx:id="fieldAlamat" layoutX="91.0" layoutY="188.0" />
+      <Button fx:id="updateBtn" layoutX="82.0" layoutY="308.0" mnemonicParsing="false" onAction="#onUpdateBtn" text="UPDATE" />
    </children>
 </AnchorPane>
