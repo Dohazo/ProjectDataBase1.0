@@ -1,11 +1,8 @@
 package com.example.projectdatabase;
 
-import java.time.LocalTime;
-import java.util.Date;
-
 public class Jadwal {
     private String kodeJadwal;
-    private LocalTime jamMulai;
+    private int jamMulai;
 
     public String getKodeJadwal() {
         return kodeJadwal;
@@ -15,15 +12,15 @@ public class Jadwal {
         this.kodeJadwal = kodeJadwal;
     }
 
-    public LocalTime getJam() {
+    public int getJam() {
         return jamMulai;
     }
 
-    public void setJam(LocalTime jam) {
+    public void setJam(int jam) {
         this.jamMulai = jam;
     }
 
-    public Jadwal(String kodeJadwal, LocalTime jam) {
+    public Jadwal(String kodeJadwal, int jam) {
         this.kodeJadwal = kodeJadwal;
         this.jamMulai = jam;
     }

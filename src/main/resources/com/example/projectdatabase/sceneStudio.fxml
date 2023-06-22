@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectdatabase.StudioController">
    <children>
       <Label layoutX="34.0" layoutY="77.0" text="Kode Studio" />
@@ -17,9 +16,9 @@
       <TextField fx:id="fieldIdBioskop" layoutX="115.0" layoutY="132.0" />
       <TextField fx:id="fieldJumlahKursi" layoutX="115.0" layoutY="188.0" />
       <Button layoutX="81.0" layoutY="229.0" mnemonicParsing="false" onAction="#onAddBtn" text="ADD" />
-      <Button layoutX="197.0" layoutY="229.0" mnemonicParsing="false" onAction="#onClrBtn" text="CLEAR" />
-      <Button layoutX="145.0" layoutY="305.0" mnemonicParsing="false" onAction="#onDeleteBtn" text="DELETE" />
-      <TableView fx:id="tblStudio" layoutX="359.0" layoutY="55.0" prefHeight="231.0" prefWidth="284.0">
+      <Button layoutX="239.0" layoutY="229.0" mnemonicParsing="false" onAction="#onClrBtn" text="CLEAR" />
+      <Button fx:id="deleteBtn" layoutX="237.0" layoutY="305.0" mnemonicParsing="false" onAction="#onDeleteBtn" text="DELETE" />
+      <TableView fx:id="tblStudio" layoutX="359.0" layoutY="55.0" onMouseClicked="#getSelected" prefHeight="231.0" prefWidth="284.0">
         <columns>
           <TableColumn fx:id="tblkodeStudio" prefWidth="90.0" text="kode_studio" />
           <TableColumn fx:id="tblIdBioskop" prefWidth="78.0" text="id_bioskop" />
@@ -27,5 +26,6 @@
         </columns>
       </TableView>
       <Label layoutX="159.0" layoutY="32.0" text="TABEL STUDIO" />
+      <Button fx:id="updatebtn" layoutX="72.0" layoutY="305.0" mnemonicParsing="false" onAction="#onUpdateBtn" text="UPDATE" />
    </children>
 </AnchorPane>

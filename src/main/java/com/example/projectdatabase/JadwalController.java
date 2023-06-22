@@ -6,9 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.security.Key;
 import java.time.LocalTime;
-import java.util.Date;
 
 public class JadwalController {
     @FXML
@@ -20,7 +18,7 @@ public class JadwalController {
     @FXML
     ObservableList<Jadwal> listjadwal = FXCollections.observableArrayList();
     @FXML
-    LocalTime jamMwf;
+    int jamMwf;
     @FXML
     TextField fieldkodeJadwal;
     @FXML
@@ -75,8 +73,8 @@ int menit;
     @FXML
     private void onAddBtn(){
         kodejadwal = fieldkodeJadwal.getText();
-
-        jamMwf = LocalTime.of(Integer.parseInt(fieldJam.getText()),Integer.parseInt(fieldMenit.getText()));
+//
+//        jamMwf = (Integer.parseInt(fieldJam.getText()),Integer.parseInt(fieldMenit.getText()));
         System.out.println(jamMwf);
         listjadwal.add(new Jadwal(kodejadwal,jamMwf));
         tblJadwal.setItems(listjadwal);
